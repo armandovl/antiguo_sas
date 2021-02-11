@@ -1,0 +1,14 @@
+FILENAME REFFILE '/folders/myfolders/CursoSAS/todos.csv';
+
+PROC IMPORT DATAFILE=REFFILE
+	DBMS=CSV
+	OUT=importadotodos;
+	GETNAMES=YES;
+RUN;
+
+PROC CONTENTS DATA=importadotodos; RUN;
+proc glm;
+class institucion kolb grado lengua experiencia;
+model CALPRODUCTOS CALCAMPO CALCAPACITACION CALFINAL= LENGUA*GRADO LENGUA*EXPERIENCIA LENGUA*KOLB LENGUA*INSTITUCION GRADO*EXPERIENCIA GRADO*KOLB GRADO*INSTITUCION EXPERIENCIA*KOLB EXPERIENCIA*INSTITUCION KOLB*INSTITUCION institucion*kolb*grado*lengua*experiencia /ss3;
+*means institucion/lsd lines;
+run;
