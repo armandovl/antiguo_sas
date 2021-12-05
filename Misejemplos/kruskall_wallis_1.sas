@@ -2,13 +2,15 @@
 
 control, tratamiento a, tretamiento b, tratamiento c
 6 muy abundante   1 practicamente nada de marmoleo
-información:
+informaciÃ³n:
 fuente: libro colegio pag 52
 prueba:
 procedimiento:
 Resultado:
 ho-ha
 significancia
+
+cambiar
 
 */
 
